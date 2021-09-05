@@ -4,9 +4,9 @@ using System.Text;
 
 namespace OOP2
 {
-    class Musteri
+    interface IKrediManager
     {
-        public int Id { get; set; }
-        public string MusteriNo { get; set; }
+        void Hesapla();
+
     }
 }

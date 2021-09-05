@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP2
+namespace HomeworkFiveForFifthDay.Abstract
 {
-    class Musteri
+    interface IEntity
     {
         public int Id { get; set; }
-        public string MusteriNo { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace OOP2
 {
@@ -6,7 +7,20 @@ namespace OOP2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IKrediManager tasıtkredimanager = new TasıtKrediManager();
+            IKrediManager ihtiyackredimanager = new İhtiyacKrediManager();
+
+            ILoggerService databaseloggerservice = new DatabaseLoggerService();
+            ILoggerService fileloggerservice = new FileLoggerService();
+
+            BasvuruManager basvuruManager = new BasvuruManager();
+
+            basvuruManager.BasvuruYap(tasıtkredimanager, databaseloggerservice);
+
+            List<IKrediManager> krediler = new List<IKrediManager>() {ihtiyackredimanager,tasıtkredimanager };
+
+            //  basvuruManager.KrediOnBilgilendirmesiYap(krediler);
+
         }
     }
 }

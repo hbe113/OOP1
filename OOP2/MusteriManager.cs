@@ -4,9 +4,11 @@ using System.Text;
 
 namespace OOP2
 {
-    class Musteri
+    class MusteriManager
     {
-        public int Id { get; set; }
-        public string MusteriNo { get; set; }
+        public void Add(Musteri musteri)
+        {
+
+        }
     }
 }
